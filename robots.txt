@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://svitlorent.com/sitemap.xml

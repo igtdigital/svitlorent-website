@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Оренда зарядних станцій екофлоу у Києві - SvitloRent</title>
+    <meta name="description" content="Оренда потужних зарядних станцій (2-3 кВт*г) у Києві. Резервне живлення для котлів, холодильників та офісів. Видача на Позняках за 15 хвилин. Працюємо під час блекаутів.">
+    <meta name="keywords" content="оренда зарядних станцій, прокат ecoflow, оренда ecoflow, оренда екофло, оренда екофлоу, оренда oukitel київ, живлення для котла, Позняки, Осокорки, SvitloRent">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
+        /* Custom Switcher Styles */
+        .device-checkbox:checked + div {
+            background-color: #FEF3C7; /* yellow-100 */
+            border-color: #F59E0B; /* amber-500 */
+            color: #78350F; /* amber-900 */
+        }
+        .time-radio:checked + label {
+            background-color: #1E293B; /* slate-800 */
+            color: white;
+            border-color: #1E293B;
+        }
+        
+        .pulse-btn {
+            animation: pulse-shadow 2s infinite;
+        }
+        @keyframes pulse-shadow {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+        /* Flicker Effect */
+        .flicker-text {
+            animation: flicker 2s linear forwards;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+            10% { opacity: 0.3; }
+            15% { opacity: 1; }
+            20% { opacity: 0.1; }
+            25% { opacity: 1; }
+            30% { opacity: 0.5; }
+            35% { opacity: 1; }
+            100% { opacity: 1; }
+        }
+
+        /* Hide scrollbar for gallery */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+    <!-- NAVIGATION BAR -->
+    <nav class="absolute top-0 left-0 w-full z-50 py-6">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center shadow-lg shadow-yellow-500/20">
+                    <i class="fas fa-bolt text-slate-900 text-xl"></i>
+                </div>
+                <span class="text-white text-2xl font-black tracking-tighter">Svitlo<span class="text-yellow-500">Rent</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="/yak-obraty-zariadnu-stantsiiu" class="text-white/80 hover:text-white text-sm font-semibold transition">Як обрати станцію</a>
+                <a href="#calculator" class="text-white/80 hover:text-white text-sm font-semibold transition">Розрахунок</a>
+                <a href="#contact-form" class="text-white/80 hover:text-white text-sm font-semibold transition">Бронювання</a>
+                <a href="tel:+380676361027" class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl text-white text-sm font-bold border border-white/10 hover:bg-white/20 transition">
+                    Зателефонувати
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- HERO SECTION -->
+    <header class="relative bg-slate-900 text-white pt-32 pb-24 overflow-hidden min-h-[80vh] flex items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1556020685-ae41abfc9365?auto=format&fit=crop&w=1920&q=80" 
+                 class="w-full h-full object-cover opacity-30" 
+                 alt="Затишна квартира">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-50"></div>
+        </div>
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-yellow-500/10 to-transparent"></div>
+        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-md mx-auto px-6 relative z-10 text-center md:max-w-4xl">
+            <div class="inline-flex items-center bg-white/10 px-3 py-1 rounded-full text-xs font-semibold text-yellow-400 mb-6 border border-white/10">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></span>
+                Працюємо під час блекаутів
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                <span class="flicker-text">Світло є, коли</span> <br> 
+                <span class="text-yellow-400 flicker-text" style="animation-delay: 0.5s;">воно потрібне</span>
+            </h1>
+            
+            <p class="text-slate-300 text-lg md:text-xl mb-8 leading-relaxed">
+                Оренда потужних зарядних станцій (2–3 кВт) у Києві. Заживимо котел, холодильник та офіс.
+                <br>
+                <span class="text-yellow-400 font-bold bg-white/10 px-2 py-1 rounded-lg mt-2 inline-block">
+                    ⚡️ Акція: 2 кВт за ціною 1 кВт ⚡️ Оренда від 2-х діб
+                </span>
+                
+            </p>
+        
+            <div class="flex flex-col gap-4 justify-center sm:flex-row">
+                <a href="tel:+380676361027" class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition flex items-center justify-center gap-2">
+                    <i class="fas fa-phone-alt text-yellow-500"></i> Зателефонувати менеджеру
+                </a>
+                <a href="#calculator" class="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition shadow-lg shadow-yellow-500/30 pulse-btn">
+                    Підібрати станцію
+                </a>
+                <a href="https://t.me/svitlohub_support_bot" class="bg-white/10 backdrop-blur border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition flex items-center justify-center gap-2">
+                    <i class="fab fa-telegram"></i> Написати менеджеру
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SOCIAL PROOF (UPDATED) -->
+    <section class="bg-white py-8 border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Нам довіряють тепло своїх домівок</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition duration-500">
+                <!-- 3 Роки -->
+                <div class="flex items-center gap-2">
+                    <div class="text-2xl font-black text-slate-800">3 Роки</div>
+                    <div class="text-xs text-slate-500 leading-tight">На ринку<br>енергетики</div>
+                </div>
+                <!-- 50+ Родин -->
+                <div class="flex items-center gap-2">
+                    <div class="text-2xl font-black text-slate-800">50+</div>
+                    <div class="text-xs text-slate-500 leading-tight">Родин<br>з теплом</div>
+                </div>
+                <!-- 100% Заряд -->
+                <div class="flex items-center gap-2">
+                    <div class="text-2xl font-black text-slate-800">100%</div>
+                    <div class="text-xs text-slate-500 leading-tight">Заряд<br>при видачі</div>
+                </div>
+                <!-- Рейтинг -->
+                <div class="flex items-center gap-2">
+                    <div class="text-yellow-500 text-xl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="text-xs text-slate-500 leading-tight">Рейтинг<br>на OLX</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS LINE -->
+    <section class="py-10 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-center text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Тільки професійне обладнання</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 select-none">
+                <div class="text-2xl md:text-3xl font-black text-slate-300 hover:text-slate-900 transition duration-300 cursor-default">
+                    EcoFlow
+                </div>
+                <div class="text-2xl md:text-3xl font-black text-slate-300 hover:text-blue-600 transition duration-300 cursor-default">
+                    BLUETTI
+                </div>
+                <div class="text-2xl md:text-3xl font-black text-slate-300 hover:text-orange-500 transition duration-300 cursor-default">
+                    OUKITEL
+                </div>
+                <div class="text-2xl md:text-3xl font-black text-slate-300 hover:text-green-600 transition duration-300 cursor-default">
+                    AFERIY
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT PAGE 1 + CALCULATOR -->
+    <section id="calculator" class="py-16 md:py-24 max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4">На скільки вистачить енергії?</h2>
+            <p class="text-slate-600">Оберіть ваші прилади, щоб розрахувати необхідну потужність.</p>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+            <div class="p-6 md:p-10">
+                <div class="mb-8">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">1. Що підключаємо?</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <label class="cursor-pointer group">
+                            <input type="checkbox" value="60" class="device-checkbox hidden" onchange="calculate()">
+                            <div class="border border-slate-200 rounded-xl p-4 flex flex-col items-center gap-2 transition-all hover:border-slate-300 group-active:scale-95">
+                                <i class="fas fa-laptop text-2xl text-slate-400 group-hover:text-slate-600"></i>
+                                <span class="text-sm font-semibold">Ноутбук</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer group">
+                            <input type="checkbox" value="100" class="device-checkbox hidden" onchange="calculate()">
+                            <div class="border border-slate-200 rounded-xl p-4 flex flex-col items-center gap-2 transition-all hover:border-slate-300 group-active:scale-95">
+                                <i class="fas fa-tv text-2xl text-slate-400 group-hover:text-slate-600"></i>
+                                <span class="text-sm font-semibold">Телевізор</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer group">
+                            <input type="checkbox" value="150" class="device-checkbox hidden" onchange="calculate()">
+                            <div class="border border-slate-200 rounded-xl p-4 flex flex-col items-center gap-2 transition-all hover:border-slate-300 group-active:scale-95">
+                                <i class="fas fa-snowflake text-2xl text-slate-400 group-hover:text-slate-600"></i>
+                                <span class="text-sm font-semibold">Холодильник</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer group">
+                            <input type="checkbox" value="150" class="device-checkbox hidden" onchange="calculate()">
+                            <div class="border border-slate-200 rounded-xl p-4 flex flex-col items-center gap-2 transition-all hover:border-slate-300 group-active:scale-95">
+                                <i class="fas fa-fire text-2xl text-slate-400 group-hover:text-slate-600"></i>
+                                <span class="text-sm font-semibold">Газовий котел</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer group">
+                            <input type="checkbox" value="800" class="device-checkbox hidden" onchange="calculate()">
+                            <div class="border border-slate-200 rounded-xl p-4 flex flex-col items-center gap-2 transition-all hover:border-slate-300 group-active:scale-95">
+                                <i class="fas fa-hammer text-2xl text-slate-400 group-hover:text-slate-600"></i>
+                                <span class="text-sm font-semibold">Перфоратор</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">2. Тривалість роботи (годин)</h3>
+                    <div class="flex bg-slate-100 p-1 rounded-xl">
+                        <div class="flex-1">
+                            <input type="radio" name="hours" id="h5" value="5" class="time-radio hidden" onchange="calculate()" checked>
+                            <label for="h5" class="block text-center py-3 rounded-lg text-sm font-bold text-slate-500 cursor-pointer transition-all">5 год</label>
+                        </div>
+                        <div class="flex-1">
+                            <input type="radio" name="hours" id="h10" value="10" class="time-radio hidden" onchange="calculate()">
+                            <label for="h10" class="block text-center py-3 rounded-lg text-sm font-bold text-slate-500 cursor-pointer transition-all">10 год</label>
+                        </div>
+                        <div class="flex-1">
+                            <input type="radio" name="hours" id="h15" value="15" class="time-radio hidden" onchange="calculate()">
+                            <label for="h15" class="block text-center py-3 rounded-lg text-sm font-bold text-slate-500 cursor-pointer transition-all">15 год</label>
+                        </div>
+                        <div class="flex-1">
+                            <input type="radio" name="hours" id="h20" value="20" class="time-radio hidden" onchange="calculate()">
+                            <label for="h20" class="block text-center py-3 rounded-lg text-sm font-bold text-slate-500 cursor-pointer transition-all">20 год</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 rounded-2xl p-6 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i class="fas fa-bolt text-8xl text-yellow-400"></i>
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <p class="text-slate-400 text-sm mb-1">Необхідний запас енергії:</p>
+                        <div class="text-4xl font-black text-white mb-6">
+                            <span id="result-kwh">0.0</span> <span class="text-xl font-normal text-slate-400">кВт·год</span>
+                        </div>
+
+                        <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/10">
+                            <p class="text-xs text-yellow-400 font-bold uppercase mb-2">Рекомендація SvitloRent:</p>
+                            <h4 class="text-xl font-bold" id="result-model">Оберіть прилади...</h4>
+                            <p class="text-sm text-slate-300 mt-1" id="result-desc">Щоб побачити результат</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ОТЗЫВЫ GOOGLE -->
+        <section class="py-16 bg-slate-100 border-t border-slate-200">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-slate-800">Що кажуть наші клієнти</h2>
+                    <p class="text-slate-500 mt-2">Реальні відгуки з Google Maps</p>
+                </div>
+                
+                <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-ca17a1eb-3839-4b83-8f79-cf09b154dc8a" data-elfsight-app-lazy></div>
+
+            </div>
+        </section>
+
+
+        <!-- PRICING TABLE SECTION -->
+        <section id="pricing" class="py-16 bg-slate-50 border-t border-b border-slate-200">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-slate-800">Тарифи та Умови</h2>
+                    <div class="inline-block mt-4 bg-yellow-100 text-yellow-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+                        <i class="fas fa-calendar-alt mr-2"></i> Мінімальне замовлення <br> 2 доби
+                    </div>
+                    <p class="text-slate-500 mt-2">Оберіть ємність станції, щоб побачити актуальні ціни</p>
+                </div>
+
+                <!-- Перемикач ємності -->
+                <!-- 
+                UPDATED LOGIC:
+                1. 'btn-2kw' now has the active style by default (bg-slate-900 text-white shadow-lg).
+                2. 'btn-1kw' now has the inactive style by default (bg-white text-slate-500).
+                -->
+                <div class="flex flex-wrap justify-center gap-2 mb-8 bg-white p-2 rounded-2xl border border-slate-200 w-fit mx-auto shadow-sm">
+                    <button onclick="switchPricing('1kw')" id="btn-1kw" class="price-btn bg-white text-slate-500 hover:bg-slate-100 px-6 py-3 rounded-xl font-bold transition-all">1 кВт·год</button>
+                    <button onclick="switchPricing('2kw')" id="btn-2kw" class="price-btn bg-slate-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg">2 кВт·год</button>
+                    <button onclick="switchPricing('3kw')" id="btn-3kw" class="price-btn bg-white text-slate-500 hover:bg-slate-100 px-6 py-3 rounded-xl font-bold transition-all">3 кВт·год</button>
+                    <button onclick="switchPricing('max')" id="btn-max" class="price-btn bg-white text-slate-500 hover:bg-slate-100 px-6 py-3 rounded-xl font-bold transition-all">> 3 кВт·год</button>
+                </div>
+
+                <!-- Контейнер карток -->
+                <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden min-h-[300px]">
+                    
+                    <!-- ТАРИФ 1 кВт -->
+                    <div id="price-1kw" class="pricing-tab p-8 md:p-12 hidden">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="w-full md:w-1/2">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2"><i class="fas fa-battery-half text-slate-400"></i> EcoFlow Delta 2 або аналог</h3>
+                                
+                                <ul class="space-y-4 text-sm md:text-base opacity-75">
+                                    <li class="flex justify-between border-b border-slate-100 pb-2">
+                                        <span class="text-slate-500 font-medium">2-3 доби</span>
+                                        <span class="font-bold text-slate-900">1 800 грн/доба <del class="text-slate-400 text-xs font-normal">3 000 грн</del></span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-slate-100 pb-2">
+                                        <span class="text-slate-500 font-medium">4-7 діб</span>
+                                        <span class="font-bold text-slate-900">1 600 грн/доба <del class="text-slate-400 text-xs font-normal">2 700 грн</del></span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-slate-100 pb-2">
+                                        <span class="text-slate-500 font-medium">8+ діб</span>
+                                        <span class="font-bold text-slate-900">1 500 грн/доба <del class="text-slate-400 text-xs font-normal">2 500 грн</del></span>
+                                    </li>
+                                </ul>
+                                <p class="mt-4 text-xs text-red-500 font-bold">* Рекомендуємо обрати тариф 2 кВт за тією ж ціною за добу!</p>
+                            </div>
+                            <div class="w-full md:w-1/2 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                                <h4 class="font-bold text-slate-600 mb-2 text-xs uppercase tracking-wider">Страхова застава</h4>
+                                <p class="text-3xl font-black text-slate-900 mb-2">20 000 грн</p>
+                                <p class="text-xs text-slate-500 leading-snug">Повертається в повному обсязі при поверненні станції.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ТАРИФ 2 кВт (Visible by default 'block', Added Discount Banner) -->
+                    <div id="price-2kw" class="pricing-tab p-8 md:p-12 block">
+                        <!-- DISCOUNT BANNER -->
+                        <div class="bg-red-50 text-red-600 border border-red-100 p-4 rounded-xl mb-8 text-center shadow-sm">
+                            <p class="font-bold text-lg"><i class="fas fa-fire mr-2"></i>ЗНИЖКА -40% до кінця місяця</p>
+                            <p class="text-sm">Віддаємо станції 2 кВт·год за добовими тарифами звичайних 1 кВт·год!</p>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="w-full md:w-1/2">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2"><i class="fas fa-battery-full text-yellow-500"></i> Oukitel P2001 Plus або аналог</h3>
+                                <ul class="space-y-4 text-sm md:text-base">
+                                    <li class="flex justify-between border-b border-slate-100 pb-2">
+                                        <span class="text-slate-500 font-medium">2-3 доби</span>
+                                        <span class="font-bold text-slate-900">1 800 грн/доба <del class="text-slate-400 text-xs font-normal">3 000 грн</del></span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-slate-100 pb-2">
+                                        <span class="text-slate-500 font-medium">4-7 діб</span>
+                                        <span class="font-bold text-slate-900">1 600 грн/доба <del class="text-slate-400 text-xs font-normal">2 700 грн</del></span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-slate-100 pb-2">
+                                        <span class="text-slate-500 font-medium">8+ діб</span>
+                                        <span class="font-bold text-slate-900">1 500 грн/доба <del class="text-slate-400 text-xs font-normal">2 500 грн</del></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-full md:w-1/2 bg-yellow-50 p-6 rounded-2xl border border-yellow-200">
+                                <h4 class="font-bold text-yellow-800 mb-2 text-xs uppercase tracking-wider flex items-center gap-2"><i class="fas fa-shield-alt"></i> Страхова застава</h4>
+                                <p class="text-3xl font-black text-slate-900 mb-2">35 000 грн</p>
+                                <p class="text-xs text-yellow-800 leading-snug">Вноситься при отриманні та повертається в повному обсязі після перевірки станції.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ТАРИФ 3 кВт -->
+                    <div id="price-3kw" class="pricing-tab p-8 md:p-12 hidden">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="w-full md:w-1/2">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2"><i class="fas fa-charging-station text-blue-600"></i> FOSSiBOT / Bluetti</h3>
+                                <ul class="space-y-4 text-sm md:text-base">
+                                    <li class="flex justify-between border-b border-slate-100 pb-2">
+                                        <span class="text-slate-500 font-medium">2-3 доби</span>
+                                        <span class="font-bold text-slate-900">2 200 грн/доба <del class="text-slate-400 text-xs font-normal">3 700 грн</del></span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-slate-100 pb-2">
+                                        <span class="text-slate-500 font-medium">4-7 діб</span>
+                                        <span class="font-bold text-slate-900">2 000 грн/доба <del class="text-slate-400 text-xs font-normal">3 400 грн</del></span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-slate-100 pb-2">
+                                        <span class="text-slate-500 font-medium">8+ діб</span>
+                                        <span class="font-bold text-slate-900">1 800 грн/доба <del class="text-slate-400 text-xs font-normal">3 000 грн</del></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-full md:w-1/2 bg-blue-50 p-6 rounded-2xl border border-blue-200">
+                                <h4 class="font-bold text-blue-800 mb-2 text-xs uppercase tracking-wider">Страхова застава</h4>
+                                <p class="text-3xl font-black text-slate-900 mb-2">55 000 грн</p>
+                                <p class="text-xs text-blue-800 leading-snug">Гарантія на обладнання високої потужності.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ТАРИФ MAX -->
+                    <div id="price-max" class="pricing-tab p-8 md:p-12 hidden text-center flex flex-col justify-center items-center h-full min-h-[300px]">
+                        <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-3xl">🏗️</div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Індивідуальні рішення > 3 кВт</h3>
+                        <p class="text-slate-500 max-w-md mx-auto mb-8">Для будівельних майданчиків, зйомок, заходів та бізнесу ми пропонуємо потужні рішення під запит.</p>
+                        <a href="tel:+380676361027" class="bg-yellow-500 text-slate-900 px-8 py-3 rounded-xl font-bold hover:bg-yellow-400 transition shadow-lg shadow-yellow-200">
+                            Отримати прорахунок
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="mt-16 grid md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-4 mx-auto md:mx-0">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Зарядка за 90 хвилин</h3>
+                <p class="text-slate-500 text-sm">Наші станції Oukitel P2001 заряджаються від 0 до 100% за 1.5 години. Ви встигнете зарядитись навіть між графіками 4/4.</p>
+            </div>
+            <div>
+                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-4 mx-auto md:mx-0">
+                    <i class="fas fa-wave-square"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Чиста синусоїда</h3>
+                <p class="text-slate-500 text-sm">Безпечно для газових котлів, насосів та чутливої комп'ютерної техніки. Жодних ризиків для обладнання.</p>
+            </div>
+            <div>
+                <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-4 mx-auto md:mx-0">
+                    <i class="fas fa-hand-holding-dollar"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Без прихованих оплат</h3>
+                <p class="text-slate-500 text-sm">Ціна фіксується в договорі. Застава повертається миттєво при здачі станції. Все прозоро через ФОП.</p>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+            <a href="https://t.me/svitlohub_support_bot" class="inline-block bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-slate-800 transition">
+                Забронювати модель
+            </a>
+        </div>
+    </section>
+
+    
+
+    <!-- CONTENT PAGE 2 (GALLERY ADDED) -->
+    <section class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-start gap-12">
+                
+                <!-- SCROLLABLE GALLERY START -->
+                <div class="w-full md:w-1/2">
+                    <!-- ЗАГОЛОВОК ГАЛЕРЕИ -->
+                    <div class="mb-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            <span class="text-xs font-bold text-green-600 uppercase tracking-wider">В наявності на складі</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800">Наш парк обладнання</h3>
+                        <p class="text-slate-500 text-sm mt-1">Ми тримаємо постійний резерв заряджених станцій, готових до видачі день у день.</p>
+                    </div>
+
+                    <!-- GALLERY SLIDER -->
+                    <div class="relative group">
+                        <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar">
+                            <!-- Slide 1: Oukitel (Your Photo) -->
+                            <div class="min-w-full snap-center relative rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                                 <img src="station1.jpg" class="w-full h-64 md:h-80 object-cover" alt="Oukitel P2001" onerror="this.src='https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80'">
+                                 <div class="absolute bottom-0 left-0 bg-yellow-500 text-slate-900 font-bold text-xs px-3 py-1 m-3 rounded-lg shadow-md">
+                                     Oukitel P2001
+                                 </div>
+                            </div>
+                            
+                            <!-- Slide 2: Bluetti (Placeholder) -->
+                            <div class="min-w-full snap-center relative rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                                 <img src="station2.jpg" class="w-full h-64 md:h-80 object-cover" alt="Bluetti">
+                                 <div class="absolute bottom-0 left-0 bg-blue-600 text-white font-bold text-xs px-3 py-1 m-3 rounded-lg shadow-md">
+                                     Bluetti
+                                 </div>
+                            </div>
+    
+                            <!-- Slide 3: Aferiy (Placeholder) -->
+                            <div class="min-w-full snap-center relative rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                                 <img src="station3.jpg" class="w-full h-64 md:h-80 object-cover" alt="Aferiy">
+                                 <div class="absolute bottom-0 left-0 bg-green-600 text-white font-bold text-xs px-3 py-1 m-3 rounded-lg shadow-md">
+                                     Aferiy
+                                 </div>
+                            </div>
+                        </div>
+                        <!-- Gallery Hint -->
+                        <div class="text-center text-xs text-slate-400 mt-2 flex items-center justify-center gap-2 animate-pulse">
+                            <i class="fas fa-arrows-left-right"></i> Гортайте фото станцій
+                        </div>
+                    </div>
+                </div>
+                <!-- GALLERY END -->
+
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-6">Ми подбали про деталі</h2>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Офіційний договір</h4>
+                                <p class="text-slate-500 text-sm mt-1">Працюємо легально (ФОП). Підписуємо договір оренди за 5 хвилин. Потрібен лише паспорт.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Зручна локація</h4>
+                                <p class="text-slate-500 text-sm mt-1">Самовивіз з Позняків (вул. Гліба Бабіча) або доставка кур'єром по Києву. Завжди на зв'язку.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8">
+                        <a href="https://t.me/svitlohub_support_bot" class="w-full md:w-auto inline-block text-center bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition shadow-lg shadow-yellow-200">
+                            Хочу світло!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FORM SECTION (NETLIFY) -->
+    <section id="contact-form" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-800">Забронювати станцію</h2>
+                <p class="text-slate-500 mt-2">Залиште контакти, ми зв'яжемося для уточнення деталей.</p>
+            </div>
+            
+            <form name="booking" netlify method="POST" data-netlify="true" action="/success.html" class="bg-slate-50 p-8 rounded-3xl shadow-lg border border-slate-100">
+                <input type="hidden" name="form-name" value="booking">
+                
+                <div class="mb-5">
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Ваш номер телефону</label>
+                    <input 
+                        type="tel" 
+                        name="phone" 
+                        required 
+                        value="+380" 
+                        oninput="if (!this.value.startsWith('+380')) this.value = '+380'"
+                        placeholder="+380 XX XXX XX XX" 
+                        class="w-full p-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none transition font-semibold"
+                    >
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Дата початку</label>
+                        <input type="date" name="start_date" required class="w-full p-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none transition text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Дата закінчення</label>
+                        <input type="date" name="end_date" required class="w-full p-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none transition text-sm">
+                    </div>
+                </div>
+                
+                <button type="submit" class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition shadow-lg shadow-slate-900/20 flex justify-center items-center gap-2">
+                    Надіслати заявку <i class="fas fa-paper-plane text-yellow-400"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER (UPDATED) -->
+    <footer class="bg-slate-900 text-slate-400 py-12 text-sm">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div>
+                <span class="text-white text-xl font-bold tracking-tight block mb-4">Svitlo<span class="text-yellow-400">Rent</span></span>
+                <p>Енергонезалежність для вашого дому та бізнесу.</p>
+                <a href="/yak-obraty-zariadnu-stantsiiu" class="inline-block mt-4 hover:text-yellow-400 transition underline">Як обрати зарядну станцію: формули та споживання техніки</a>
+                <a href="/remont-zariadnykh-stantsii-kyiv" class="block mt-4 hover:text-yellow-400 transition underline">Ремонт зарядних станцій у Києві: сервіси EcoFlow та Bluetti</a>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Контакти</h5>
+                <p class="mb-3">
+                    <!-- Updated Map Link & Text -->
+                    <a href="https://maps.app.goo.gl/Wmno9uWLjHaFfzxr9" target="_blank" class="hover:text-yellow-400 transition flex items-start">
+                        <i class="fas fa-map-marker-alt mr-2 mt-1"></i> <span>Київ, вул. Гліба Бабіча, 8 (ЖК Причал 8) (Позняки)</span>
+                    </a>
+                </p>
+                <!-- Added Phone Number -->
+                <p class="mb-3">
+                    <a href="tel:+380676361027" class="hover:text-yellow-400 transition flex items-center font-bold text-white">
+                        <i class="fas fa-phone-alt mr-2"></i> +38 (067) 636-10-27
+                    </a>
+                </p>
+                <p>
+                    <a href="https://t.me/svitlohub_support_bot" target="_blank" class="hover:text-yellow-400 transition flex items-center">
+                        <i class="fab fa-telegram mr-2"></i> @svitlohub_support_bot
+                    </a>
+                </p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Юридична інформація</h5>
+                <p>ФОП Токмаков Ігор Геннадійович</p>
+                <p>Оренда та лізинг інших машин, устатковання</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-white/10">
+            &copy; 2026 SvitloRent. Всі права захищені.
+        </div>
+    </footer>
+    <!-- PRICING SWITCHER LOGIC -->
+    <script>
+        function switchPricing(tabId) {
+            // 1. Приховати всі вкладки
+            document.querySelectorAll('.pricing-tab').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            
+            // 2. Показати обрану
+            const selected = document.getElementById('price-' + tabId);
+            if(selected) {
+                selected.classList.remove('hidden');
+                selected.classList.add('block');
+            }
+
+            // 3. Оновити стилі кнопок (скинути всі)
+            document.querySelectorAll('.price-btn').forEach(btn => {
+                btn.className = "price-btn bg-white text-slate-500 hover:bg-slate-100 px-6 py-3 rounded-xl font-bold transition-all cursor-pointer";
+            });
+
+            // 4. Активувати натиснуту кнопку
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if(activeBtn) {
+                activeBtn.className = "price-btn bg-slate-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg cursor-default";
+            }
+        }
+    </script>
+    <!-- CALCULATOR LOGIC -->
+    <script>
+        function calculate() {
+            let totalWatts = 0;
+            const checkboxes = document.querySelectorAll('.device-checkbox:checked');
+            checkboxes.forEach(cb => { totalWatts += parseInt(cb.value); });
+
+            let hours = 0;
+            const radios = document.getElementsByName('hours');
+            for (let r of radios) { if (r.checked) hours = parseInt(r.value); }
+
+            let neededKwh = (totalWatts * hours) / 1000;
+            neededKwh = neededKwh / 0.85;
+
+            const resultEl = document.getElementById('result-kwh');
+            const modelEl = document.getElementById('result-model');
+            const descEl = document.getElementById('result-desc');
+
+            animateValue(resultEl, parseFloat(resultEl.innerText), neededKwh, 500);
+
+            if (totalWatts === 0) {
+                modelEl.innerText = "Оберіть прилади...";
+                descEl.innerText = "Щоб ми могли підібрати станцію";
+                modelEl.className = "text-xl font-bold text-white";
+                return;
+            }
+
+            if (neededKwh <= 1.0) {
+                modelEl.innerText = "EcoFlow Delta 2";
+                descEl.innerText = "Компактна, легка, ідеальна для ноутбука та світла.";
+                modelEl.className = "text-2xl font-bold text-green-400";
+            } else if (neededKwh <= 2.2) {
+                modelEl.innerText = "Oukitel P2001 Plus";
+                descEl.innerText = "Наш хіт! Потужна (2 кВт), тягне котел та холодильник.";
+                modelEl.className = "text-2xl font-bold text-yellow-400";
+            } else if (neededKwh <= 3.8) {
+                modelEl.innerText = "FOSSiBOT F3600";
+                descEl.innerText = "Монстр автономності. Вистачить на все і надовго.";
+                modelEl.className = "text-2xl font-bold text-purple-400";
+            } else {
+                modelEl.innerText = "Індивідуальне рішення";
+                descEl.innerText = "Вам потрібен комплект станцій або генератор. Зв'яжіться з нами!";
+                modelEl.className = "text-2xl font-bold text-red-400";
+            }
+        }
+
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = (progress * (end - start) + start).toFixed(1);
+                if (progress < 1) { window.requestAnimationFrame(step); }
+            };
+            window.requestAnimationFrame(step);
+        }
+        calculate();
+    </script>
+    
+    <!-- STICKY CALL BUTTON -->
+    <div class="fixed bottom-6 right-6 z-[999]">
+        <a href="tel:+380676361027" class="bg-yellow-500 text-slate-900 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl shadow-yellow-500/50 pulse-btn border-4 border-white transition-transform active:scale-95">
+            <i class="fas fa-phone-alt text-2xl"></i>
+        </a>
+    </div>
+
+<div class="text-center mt-12 pt-8 border-t border-white/10 text-[10px] space-x-4">
+    <span>&copy; 2026 SvitloRent.</span>
+    <a href="offer.html" class="hover:text-yellow-400 transition underline">Публічна оферта</a>
+    <a href="privacy.html" class="hover:text-yellow-400 transition underline">Політика конфіденційності</a>
+</div>
+</body>
+</html>
