@@ -77,7 +77,6 @@
                 <span class="text-white text-2xl font-black tracking-tighter">Svitlo<span class="text-yellow-500">Rent</span></span>
             </div>
             <div class="hidden md:flex items-center gap-6">
-                <a href="/yak-obraty-zariadnu-stantsiiu" class="text-white/80 hover:text-white text-sm font-semibold transition">Як обрати станцію</a>
                 <a href="#calculator" class="text-white/80 hover:text-white text-sm font-semibold transition">Розрахунок</a>
                 <a href="#contact-form" class="text-white/80 hover:text-white text-sm font-semibold transition">Бронювання</a>
                 <a href="tel:+380676361027" class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl text-white text-sm font-bold border border-white/10 hover:bg-white/20 transition">
@@ -319,27 +318,28 @@
                 <!-- Контейнер карток -->
                 <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden min-h-[300px]">
                     
-                    <!-- ТАРИФ 1 кВт -->
+                    <!-- ТАРИФ 1 кВт (Hidden by default, Prices raised to match 2kW) -->
                     <div id="price-1kw" class="pricing-tab p-8 md:p-12 hidden">
                         <div class="flex flex-col md:flex-row gap-8 items-center">
                             <div class="w-full md:w-1/2">
                                 <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2"><i class="fas fa-battery-half text-slate-400"></i> EcoFlow Delta 2 або аналог</h3>
                                 
+                                <!-- NOTE: Prices raised to match 2kW to make this option less attractive -->
                                 <ul class="space-y-4 text-sm md:text-base opacity-75">
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">2-3 доби</span>
-                                        <span class="font-bold text-slate-900">1 800 грн/доба <del class="text-slate-400 text-xs font-normal">3 000 грн</del></span>
+                                        <span class="font-bold text-slate-900">1800 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">4-7 діб</span>
-                                        <span class="font-bold text-slate-900">1 600 грн/доба <del class="text-slate-400 text-xs font-normal">2 700 грн</del></span>
+                                        <span class="font-bold text-slate-900">1600 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
-                                        <span class="text-slate-500 font-medium">8+ діб</span>
-                                        <span class="font-bold text-slate-900">1 500 грн/доба <del class="text-slate-400 text-xs font-normal">2 500 грн</del></span>
+                                        <span class="text-slate-500 font-medium">8-14 діб</span>
+                                        <span class="font-bold text-slate-900">1500 грн/доба</span>
                                     </li>
                                 </ul>
-                                <p class="mt-4 text-xs text-red-500 font-bold">* Рекомендуємо обрати тариф 2 кВт за тією ж ціною за добу!</p>
+                                <p class="mt-4 text-xs text-red-500 font-bold">* Рекомендуємо обрати тариф 2 кВт за тією ж ціною!</p>
                             </div>
                             <div class="w-full md:w-1/2 bg-slate-50 p-6 rounded-2xl border border-slate-200">
                                 <h4 class="font-bold text-slate-600 mb-2 text-xs uppercase tracking-wider">Страхова застава</h4>
@@ -354,7 +354,7 @@
                         <!-- DISCOUNT BANNER -->
                         <div class="bg-red-50 text-red-600 border border-red-100 p-4 rounded-xl mb-8 text-center shadow-sm">
                             <p class="font-bold text-lg"><i class="fas fa-fire mr-2"></i>ЗНИЖКА -40% до кінця місяця</p>
-                            <p class="text-sm">Віддаємо станції 2 кВт·год за добовими тарифами звичайних 1 кВт·год!</p>
+                            <p class="text-sm">Віддаємо станції 2 кВт·год за ціною звичайних 1 кВт·год!</p>
                         </div>
 
                         <div class="flex flex-col md:flex-row gap-8 items-center">
@@ -363,15 +363,19 @@
                                 <ul class="space-y-4 text-sm md:text-base">
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">2-3 доби</span>
-                                        <span class="font-bold text-slate-900">1 800 грн/доба <del class="text-slate-400 text-xs font-normal">3 000 грн</del></span>
+                                        <span class="font-bold text-slate-900">1800 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">4-7 діб</span>
-                                        <span class="font-bold text-slate-900">1 600 грн/доба <del class="text-slate-400 text-xs font-normal">2 700 грн</del></span>
+                                        <span class="font-bold text-slate-900">1600 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
-                                        <span class="text-slate-500 font-medium">8+ діб</span>
-                                        <span class="font-bold text-slate-900">1 500 грн/доба <del class="text-slate-400 text-xs font-normal">2 500 грн</del></span>
+                                        <span class="text-slate-500 font-medium">8-14 діб</span>
+                                        <span class="font-bold text-slate-900">1500 грн/доба</span>
+                                    </li>
+                                    <li class="flex justify-between items-center pt-2">
+                                        <span class="text-slate-800 font-bold bg-yellow-100 px-2 py-1 rounded text-xs">ХІТ 🔥 Місяць</span>
+                                        <span class="font-black text-xl text-slate-900">23 000 грн</span>
                                     </li>
                                 </ul>
                             </div>
@@ -391,15 +395,19 @@
                                 <ul class="space-y-4 text-sm md:text-base">
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">2-3 доби</span>
-                                        <span class="font-bold text-slate-900">2 200 грн/доба <del class="text-slate-400 text-xs font-normal">3 700 грн</del></span>
+                                        <span class="font-bold text-slate-900">2 700 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">4-7 діб</span>
-                                        <span class="font-bold text-slate-900">2 000 грн/доба <del class="text-slate-400 text-xs font-normal">3 400 грн</del></span>
+                                        <span class="font-bold text-slate-900">2 400 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
-                                        <span class="text-slate-500 font-medium">8+ діб</span>
-                                        <span class="font-bold text-slate-900">1 800 грн/доба <del class="text-slate-400 text-xs font-normal">3 000 грн</del></span>
+                                        <span class="text-slate-500 font-medium">8-14 діб</span>
+                                        <span class="font-bold text-slate-900">2 200 грн/доба</span>
+                                    </li>
+                                    <li class="flex justify-between items-center pt-2">
+                                        <span class="text-slate-800 font-bold bg-blue-100 px-2 py-1 rounded text-xs">Місяць</span>
+                                        <span class="font-black text-xl text-slate-900">35 000 грн</span>
                                     </li>
                                 </ul>
                             </div>
@@ -587,8 +595,6 @@
             <div>
                 <span class="text-white text-xl font-bold tracking-tight block mb-4">Svitlo<span class="text-yellow-400">Rent</span></span>
                 <p>Енергонезалежність для вашого дому та бізнесу.</p>
-                <a href="/yak-obraty-zariadnu-stantsiiu" class="inline-block mt-4 hover:text-yellow-400 transition underline">Як обрати зарядну станцію: формули та споживання техніки</a>
-                <a href="/remont-zariadnykh-stantsii-kyiv" class="block mt-4 hover:text-yellow-400 transition underline">Ремонт зарядних станцій у Києві: сервіси EcoFlow та Bluetti</a>
             </div>
             <div>
                 <h5 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Контакти</h5>
