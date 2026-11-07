@@ -1,0 +1,41 @@
+
+name: AI Growth - Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify write permissions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/${GITHUB_REPOSITORY} \
+            --jq '.full_name'
+
+          echo "AI Growth workflow is running"
+          echo "Branch: ${GITHUB_REF_NAME}"
+
+      - name: Create test file
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "${GITHUB_REF_NAME}" = \
+            "feature/ai-growth-foundation"
+
+          CONTENT=$(printf 'AI Growth test successful\n' | base64 -w0)
+
+          gh api \
+            --method PUT \
+            "repos/${GITHUB_REPOSITORY}/contents/.ai-growth-test.txt" \
+            -f message="test: verify AI Growth write access" \
+            -f content="$CONTENT" \
+            -f branch="${GITHUB_REF_NAME}"
