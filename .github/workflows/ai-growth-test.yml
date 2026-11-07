@@ -1,41 +1,67 @@
 
-name: AI Growth - Test
+name: AI Growth - Agent V1
 
 on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  test:
+  agent:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
-      - name: Verify write permissions
+      - name: Install OpenAI SDK
+        run: pip install 'openai>=1.0,<3'
+
+      - name: Run AI Growth Agent
         env:
-          GH_TOKEN: ${{ github.token }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          gh api repos/${GITHUB_REPOSITORY} \
-            --jq '.full_name'
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from openai import OpenAI
 
-          echo "AI Growth workflow is running"
-          echo "Branch: ${GITHUB_REF_NAME}"
+          client = OpenAI(timeout=30, max_retries=1)
 
-      - name: Create test file
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          test "${GITHUB_REF_NAME}" = \
-            "feature/ai-growth-foundation"
+          response = client.responses.create(
+              model="gpt-4.1-mini",
+              max_output_tokens=500,
+              instructions=(
+                  "You are the AI Growth Orchestrator "
+                  "for SvitloRent, a power station rental "
+                  "business in Kyiv, Ukraine. "
+                  "Your first priority is organic search "
+                  "and AI search visibility. Google Ads "
+                  "is a future module of the same system. "
+                  "Do not invent analytics or performance data."
+              ),
+              input=(
+                  "Return a short JSON object with keys: "
+                  "agent, status, priority, next_integration. "
+                  "This is a connectivity test, not an SEO audit."
+              )
+          )
 
-          CONTENT=$(printf 'AI Growth test successful\n' | base64 -w0)
+          output = response.output_text
+          Path("ai-growth-result.json").write_text(
+              output, encoding="utf-8"
+          )
+          print("OpenAI response received")
+          print("Result saved to ai-growth-result.json")
+          PY
 
-          gh api \
-            --method PUT \
-            "repos/${GITHUB_REPOSITORY}/contents/.ai-growth-test.txt" \
-            -f message="test: verify AI Growth write access" \
-            -f content="$CONTENT" \
-            -f branch="${GITHUB_REF_NAME}"
+      - name: Upload agent result
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-growth-result
+          path: ai-growth-result.json
+          retention-days: 7
