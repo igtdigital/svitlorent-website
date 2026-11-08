@@ -80,6 +80,84 @@ jobs:
           path: gsc-test-result.json
           retention-days: 7
 
+      
+      - name: Fetch GSC Search Analytics
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import date, timedelta
+          from pathlib import Path
+          from urllib.parse import quote
+
+          import google.auth
+          from google.auth.transport.requests import AuthorizedSession
+
+          credentials, _ = google.auth.default(
+              scopes=[
+                  "https://www.googleapis.com/auth/webmasters.readonly"
+              ]
+          )
+          session = AuthorizedSession(credentials)
+
+          site = "sc-domain:svitlorent.com"
+          end_date = date.today() - timedelta(days=3)
+          start_date = end_date - timedelta(days=27)
+
+          url = (
+              "https://www.googleapis.com/webmasters/v3/sites/"
+              + quote(site, safe="")
+              + "/searchAnalytics/query"
+          )
+
+          payload = {
+              "startDate": start_date.isoformat(),
+              "endDate": end_date.isoformat(),
+              "dimensions": ["query"],
+              "rowLimit": 1000,
+              "dataState": "final"
+          }
+
+          response = session.post(
+              url, json=payload, timeout=60
+          )
+          response.raise_for_status()
+
+          rows = response.json().get("rows", [])
+          result = {
+              "site": site,
+              "start_date": start_date.isoformat(),
+              "end_date": end_date.isoformat(),
+              "row_count": len(rows),
+              "queries": [
+                  {
+                      "query": r["keys"][0],
+                      "clicks": r["clicks"],
+                      "impressions": r["impressions"],
+                      "ctr": round(r["ctr"] * 100, 2),
+                      "position": round(r["position"], 2)
+                  }
+                  for r in rows
+              ]
+          }
+
+          Path("gsc-search-analytics.json").write_text(
+              json.dumps(result, ensure_ascii=False, indent=2),
+              encoding="utf-8"
+          )
+
+          print("Site:", site)
+          print("Period:", start_date, "to", end_date)
+          print("Queries retrieved:", len(rows))
+          print("GSC analytics saved successfully")
+          PY
+
+      - name: Upload GSC Search Analytics
+        uses: actions/upload-artifact@v4
+        with:
+          name: gsc-search-analytics
+          path: gsc-search-analytics.json
+          retention-days: 7
+
       - name: Run AI Growth Agent
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
