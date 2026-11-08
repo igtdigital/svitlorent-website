@@ -24,8 +24,61 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install OpenAI SDK
-        run: pip install 'openai>=1.0,<3'
+      - name: Install AI Growth dependencies
+        run: pip install 'openai>=1.0,<3' google-auth requests
+
+      
+      - name: Test Google Search Console API
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          import google.auth
+          from google.auth.transport.requests import AuthorizedSession
+
+          credentials, project = google.auth.default(
+              scopes=[
+                  "https://www.googleapis.com/auth/webmasters.readonly"
+              ]
+          )
+
+          session = AuthorizedSession(credentials)
+
+          response = session.get(
+              "https://www.googleapis.com/webmasters/v3/sites",
+              timeout=30
+          )
+          response.raise_for_status()
+
+          data = response.json()
+          sites = data.get("siteEntry", [])
+
+          result = {
+              "status": "success",
+              "accessible_sites": [
+                  {
+                      "siteUrl": site.get("siteUrl"),
+                      "permissionLevel": site.get("permissionLevel")
+                  }
+                  for site in sites
+              ]
+          }
+
+          Path("gsc-test-result.json").write_text(
+              json.dumps(result, indent=2, ensure_ascii=False),
+              encoding="utf-8"
+          )
+
+          print(json.dumps(result, indent=2, ensure_ascii=False))
+          PY
+
+      - name: Upload GSC test result
+        uses: actions/upload-artifact@v4
+        with:
+          name: gsc-test-result
+          path: gsc-test-result.json
+          retention-days: 7
 
       - name: Run AI Growth Agent
         env:
