@@ -1,0 +1,12 @@
+body .pulse-btn,body .animate-pulse,body .flicker-text{animation:none}
+header a[href^="tel:"]{background:#f6ba13;color:#172033}header a[href^="tel:"] i{color:inherit}header a[href="#calculator"]{background:white;color:#172033;box-shadow:none}
+header a[href*="t.me"]{background:#263345;color:white;border:0;text-decoration:underline;text-underline-offset:4px}header a[href*="t.me"]:hover{background:#172033}
+body .uppercase{text-transform:none;letter-spacing:normal}body .font-black,body .font-extrabold{font-weight:700}body .font-medium{font-weight:600}
+#quickcall[hidden]{display:none}
+@media(max-width:767px){
+body h1{font-size:32px!important;line-height:1.14!important}body h2{font-size:24px!important;line-height:1.25}body h3{font-size:18px!important;line-height:1.35}body .text-xs,body .text-sm,body [class~="text-[10px]"],body small{font-size:14px;line-height:1.45}
+body header a,body form button,body .price-btn{font-size:16px;font-weight:600}body header p,body header p span{font-size:16px}
+body nav>div{padding-inline:14px;gap:6px}body nav>div>div:first-child{gap:5px}body nav>div>div:first-child>span{font-size:20px}body nav button{font-size:14px;padding:10px;min-height:44px;white-space:nowrap}
+body .pricing-tab{padding:22px 16px}body .pricing-tab li{gap:8px;align-items:baseline}body .rate{font-size:24px;font-weight:700;line-height:1.22;text-align:right}body .deposit{font-size:18px;font-weight:600}
+body .pricing-tab .text-xs{font-size:14px}body .text-slate-400.uppercase{color:#475569}body #quickcall a{width:48px;height:48px}
+}

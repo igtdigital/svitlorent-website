@@ -1,0 +1,47 @@
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
+        /* Custom Switcher Styles */
+        .device-checkbox:checked + div {
+            background-color: #FEF3C7; /* yellow-100 */
+            border-color: #F59E0B; /* amber-500 */
+            color: #78350F; /* amber-900 */
+        }
+        .time-radio:checked + label {
+            background-color: #1E293B; /* slate-800 */
+            color: white;
+            border-color: #1E293B;
+        }
+        
+        .pulse-btn {
+            animation: pulse-shadow 2s infinite;
+        }
+        @keyframes pulse-shadow {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+        /* Flicker Effect */
+        .flicker-text {
+            animation: flicker 2s linear forwards;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+            10% { opacity: 0.3; }
+            15% { opacity: 1; }
+            20% { opacity: 0.1; }
+            25% { opacity: 1; }
+            30% { opacity: 0.5; }
+            35% { opacity: 1; }
+            100% { opacity: 1; }
+        }
+
+        /* Hide scrollbar for gallery */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }

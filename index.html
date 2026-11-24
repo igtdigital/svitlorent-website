@@ -5,66 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>Оренда зарядних станцій з доставкою по Україні — SvitloRent</title>
+    <title>Оренда зарядних станцій у Києві — SvitloRent</title>
     <meta name="description" content="Оренда зарядних станцій для дому й офісу. Головний офіс і самовивіз у Києві, доставка Новою поштою до всіх обласних центрів України.">
     <meta name="keywords" content="оренда зарядних станцій, прокат ecoflow, оренда ecoflow, оренда екофло, оренда екофлоу, оренда oukitel, доставка по Україні, живлення для котла, Київ, Позняки, SvitloRent">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
 
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        
-        /* Custom Switcher Styles */
-        .device-checkbox:checked + div {
-            background-color: #FEF3C7; /* yellow-100 */
-            border-color: #F59E0B; /* amber-500 */
-            color: #78350F; /* amber-900 */
-        }
-        .time-radio:checked + label {
-            background-color: #1E293B; /* slate-800 */
-            color: white;
-            border-color: #1E293B;
-        }
-        
-        .pulse-btn {
-            animation: pulse-shadow 2s infinite;
-        }
-        @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
-        }
-        /* Flicker Effect */
-        .flicker-text {
-            animation: flicker 2s linear forwards;
-        }
-
-        @keyframes flicker {
-            0% { opacity: 0; }
-            5% { opacity: 1; }
-            10% { opacity: 0.3; }
-            15% { opacity: 1; }
-            20% { opacity: 0.1; }
-            25% { opacity: 1; }
-            30% { opacity: 0.5; }
-            35% { opacity: 1; }
-            100% { opacity: 1; }
-        }
-
-        /* Hide scrollbar for gallery */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/rental-1.css">
+<link rel="stylesheet" href="/assets/rental-2.css"><link rel="stylesheet" href="/assets/rental-3.css"><link rel="canonical" href="https://svitlorent.com/">
+<meta property="og:type" content="website"><meta property="og:locale" content="uk_UA"><meta property="og:title" content="Оренда зарядних станцій у Києві — SvitloRent"><meta property="og:description" content="Оренда зарядних станцій для дому й офісу. Головний офіс і самовивіз у Києві, доставка Новою поштою до всіх обласних центрів України."><meta property="og:url" content="https://svitlorent.com/"><meta property="og:image" content="https://svitlorent.com/station1.jpg">
+<script type="application/ld+json">{"name": "Оренда зарядних станцій — Київ", "serviceType": "Оренда зарядних станцій", "areaServed": {"@type": "City", "name": "Київ"}, "provider": {"@type": "Organization", "@id": "https://svitlorent.com/#organization", "name": "SvitloRent", "url": "https://svitlorent.com/", "telephone": "+380676361027"}, "@context": "https://schema.org", "@type": "Service", "url": "https://svitlorent.com/"}</script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
     <!-- NAVIGATION BAR -->
@@ -76,7 +30,7 @@
                 </div>
                 <span class="text-white text-2xl font-black tracking-tighter">Svitlo<span class="text-yellow-500">Rent</span></span>
             </div>
-            <div class="hidden md:flex items-center gap-6">
+            <button class="bg-white/10 text-white border border-white/20 rounded-xl px-4 py-3 font-bold" onclick="picker.showModal()" aria-haspopup="dialog">Київ ▾</button><div class="hidden md:flex items-center gap-6">
                 <a href="#calculator" class="text-white/80 hover:text-white text-sm font-semibold transition">Розрахунок</a>
                 <a href="#contact-form" class="text-white/80 hover:text-white text-sm font-semibold transition">Бронювання</a>
                 <a href="tel:+380676361027" class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl text-white text-sm font-bold border border-white/10 hover:bg-white/20 transition">
@@ -89,7 +43,7 @@
     <header class="relative bg-slate-900 text-white pt-32 pb-24 overflow-hidden min-h-[80vh] flex items-center">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1556020685-ae41abfc9365?auto=format&fit=crop&w=1920&q=80" 
+            <img src="https://images.unsplash.com/photo-1556020685-ae41abfc9365?auto=format&amp;fit=crop&amp;w=1280&amp;q=80" 
                  class="w-full h-full object-cover opacity-30" 
                  alt="Затишна квартира">
             <div class="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-50"></div>
@@ -110,7 +64,7 @@
             </h1>
             
             <p class="text-slate-300 text-lg md:text-xl mb-8 leading-relaxed">
-                Оренда зарядних станцій для дому й офісу з доставкою по Україні.
+                Оренда зарядних станцій у Києві для дому й офісу.
                 <br>
                 <span class="text-base md:text-lg">Головний офіс у Києві. Відправляємо до всіх обласних центрів України: Дніпра, Одеси, Харкова, Львова та інших міст.</span>
                 <br>
@@ -122,13 +76,13 @@
         
             <div class="flex flex-col gap-4 justify-center sm:flex-row">
                 <a href="tel:+380676361027" class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition flex items-center justify-center gap-2">
-                    <i class="fas fa-phone-alt text-yellow-500"></i> Зателефонувати менеджеру
+                    <i class="fas fa-phone-alt text-yellow-500"></i> Зателефонувати
                 </a>
                 <a href="#calculator" class="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition shadow-lg shadow-yellow-500/30 pulse-btn">
                     Підібрати станцію
                 </a>
                 <a href="https://t.me/svitlohub_support_bot" class="bg-white/10 backdrop-blur border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition flex items-center justify-center gap-2">
-                    <i class="fab fa-telegram"></i> Написати менеджеру
+                    <i class="fab fa-telegram"></i> Написати в Telegram
                 </a>
             </div>
         </div>
@@ -258,7 +212,7 @@
 
                 <div class="bg-slate-900 rounded-2xl p-6 text-white relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10">
-                        <i class="fas fa-bolt text-8xl text-yellow-400"></i>
+                        
                     </div>
                     
                     <div class="relative z-10">
@@ -286,8 +240,9 @@
                 </div>
                 
                 <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+                
                 <script src="https://elfsightcdn.com/platform.js" async></script>
-                <div class="elfsight-app-ca17a1eb-3839-4b83-8f79-cf09b154dc8a" data-elfsight-app-lazy></div>
+<div class="elfsight-app-ca17a1eb-3839-4b83-8f79-cf09b154dc8a" data-elfsight-app-lazy></div>
 
             </div>
         </section>
@@ -331,22 +286,22 @@
                                 <ul class="space-y-4 text-sm md:text-base opacity-75">
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">2-3 доби</span>
-                                        <span class="font-bold text-slate-900">1800 грн/доба</span>
+                                        <span class="rate font-bold text-slate-900">1800 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">4-7 діб</span>
-                                        <span class="font-bold text-slate-900">1600 грн/доба</span>
+                                        <span class="rate font-bold text-slate-900">1600 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">8-14 діб</span>
-                                        <span class="font-bold text-slate-900">1500 грн/доба</span>
+                                        <span class="rate font-bold text-slate-900">1500 грн/доба</span>
                                     </li>
                                 </ul>
                                 <p class="mt-4 text-xs text-red-500 font-bold">* Рекомендуємо обрати тариф 2 кВт за тією ж ціною!</p>
                             </div>
                             <div class="w-full md:w-1/2 bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                                <h4 class="font-bold text-slate-600 mb-2 text-xs uppercase tracking-wider">Страхова застава</h4>
-                                <p class="text-3xl font-black text-slate-900 mb-2">7 000 грн</p>
+                                <h4 class="font-bold text-slate-600 mb-2 text-xs uppercase tracking-wider">Поворотна застава</h4>
+                                <p class="deposit text-slate-900 mb-2">7 000 грн</p>
                                 <p class="text-xs text-slate-500 leading-snug">Повертається в повному обсязі при поверненні станції.</p>
                             </div>
                         </div>
@@ -356,7 +311,7 @@
                     <div id="price-2kw" class="pricing-tab p-8 md:p-12 block">
                         <!-- DISCOUNT BANNER -->
                         <div class="bg-red-50 text-red-600 border border-red-100 p-4 rounded-xl mb-8 text-center shadow-sm">
-                            <p class="font-bold text-lg"><i class="fas fa-fire mr-2"></i>Акційні ціни до кінця місяця</p>
+                            <p class="font-bold text-lg">Акційні ціни до кінця місяця</p>
                             <p class="text-sm">Оренда станції 2 кВт·год від 1 200 грн/доба за умови оренди від 8 діб.</p>
                         </div>
 
@@ -366,15 +321,15 @@
                                 <ul class="space-y-4 text-sm md:text-base">
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">2-3 доби</span>
-                                        <span class="font-bold text-slate-900">1 500 грн/доба <small class="block text-right font-normal text-slate-500">замість <s>2 600 грн</s></small></span>
+                                        <span class="rate font-bold text-slate-900">1 500 грн/доба <small class="block text-right font-normal text-slate-500">замість <s>2 600 грн</s></small></span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">4-7 діб</span>
-                                        <span class="font-bold text-slate-900">1 300 грн/доба <small class="block text-right font-normal text-slate-500">замість <s>2 150 грн</s></small></span>
+                                        <span class="rate font-bold text-slate-900">1 300 грн/доба <small class="block text-right font-normal text-slate-500">замість <s>2 150 грн</s></small></span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">8+ діб</span>
-                                        <span class="font-bold text-slate-900">1 200 грн/доба <small class="block text-right font-normal text-slate-500">замість <s>2 000 грн</s></small></span>
+                                        <span class="rate font-bold text-slate-900">1 200 грн/доба <small class="block text-right font-normal text-slate-500">замість <s>2 000 грн</s></small></span>
                                     </li>
                                     <li class="flex justify-between items-center pt-2">
                                         <span class="text-slate-800 font-bold bg-yellow-100 px-2 py-1 rounded text-xs">ХІТ 🔥 Місяць</span>
@@ -383,8 +338,8 @@
                                 </ul>
                             </div>
                             <div class="w-full md:w-1/2 bg-yellow-50 p-6 rounded-2xl border border-yellow-200">
-                                <h4 class="font-bold text-yellow-800 mb-2 text-xs uppercase tracking-wider flex items-center gap-2"><i class="fas fa-shield-alt"></i> Страхова застава</h4>
-                                <p class="text-3xl font-black text-slate-900 mb-2">9 000 грн</p>
+                                <h4 class="font-bold text-yellow-800 mb-2 text-xs uppercase tracking-wider flex items-center gap-2"> Поворотна застава</h4>
+                                <p class="deposit text-slate-900 mb-2">9 000 грн</p>
                                 <p class="text-sm font-bold text-yellow-800 mb-2">тільки цього місяца застава знижена</p>
                                 <p class="text-xs text-yellow-800 leading-snug">Вноситься при отриманні та повертається в повному обсязі після перевірки станції.</p>
                             </div>
@@ -399,15 +354,15 @@
                                 <ul class="space-y-4 text-sm md:text-base">
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">2-3 доби</span>
-                                        <span class="font-bold text-slate-900">2 700 грн/доба</span>
+                                        <span class="rate font-bold text-slate-900">2 700 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">4-7 діб</span>
-                                        <span class="font-bold text-slate-900">2 400 грн/доба</span>
+                                        <span class="rate font-bold text-slate-900">2 400 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between border-b border-slate-100 pb-2">
                                         <span class="text-slate-500 font-medium">8-14 діб</span>
-                                        <span class="font-bold text-slate-900">2 200 грн/доба</span>
+                                        <span class="rate font-bold text-slate-900">2 200 грн/доба</span>
                                     </li>
                                     <li class="flex justify-between items-center pt-2">
                                         <span class="text-slate-800 font-bold bg-blue-100 px-2 py-1 rounded text-xs">Місяць</span>
@@ -416,8 +371,8 @@
                                 </ul>
                             </div>
                             <div class="w-full md:w-1/2 bg-blue-50 p-6 rounded-2xl border border-blue-200">
-                                <h4 class="font-bold text-blue-800 mb-2 text-xs uppercase tracking-wider">Страхова застава</h4>
-                                <p class="text-3xl font-black text-slate-900 mb-2">15 000 грн</p>
+                                <h4 class="font-bold text-blue-800 mb-2 text-xs uppercase tracking-wider">Поворотна застава</h4>
+                                <p class="deposit text-slate-900 mb-2">15 000 грн</p>
                                 <p class="text-xs text-blue-800 leading-snug">Гарантія на обладнання високої потужності.</p>
                             </div>
                         </div>
@@ -448,7 +403,7 @@
                     <div class="border-t border-yellow-200 px-4 py-4 sm:px-6">
                         <ul class="list-disc space-y-2 pl-5 text-sm text-slate-700 md:text-base">
                             <li>Мінімальний строк оренди — <strong>5 діб</strong>. За час у дорозі додаткові доби оренди не нараховуємо.</li>
-                            <li>Страхова застава — <strong>15&nbsp;000 грн</strong>. Відправляємо станцію після повної оплати оренди та внесення застави на рахунок ФОП.</li>
+                            <li>Поворотна застава — <strong>15&nbsp;000 грн</strong>. Відправляємо станцію після повної оплати оренди та внесення застави на рахунок ФОП.</li>
                             <li>Доставляємо <strong>Новою поштою</strong> до відділення або на вашу адресу. Доставку до вас і повернення станції оплачуєте ви. Орієнтовна вартість — <strong>400 грн в один бік</strong>.</li>
                         </ul>
                         <a href="tel:+380676361027" class="mt-4 inline-flex items-center gap-2 font-bold text-slate-900 underline decoration-yellow-600 underline-offset-4 hover:text-yellow-800">
@@ -460,23 +415,17 @@
         </section>
         <div class="mt-16 grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
-                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-4 mx-auto md:mx-0">
-                    <i class="fas fa-tachometer-alt"></i>
-                </div>
+                
                 <h3 class="font-bold text-lg mb-2">Зарядка за 90 хвилин</h3>
                 <p class="text-slate-500 text-sm">Наші станції Oukitel P2001 заряджаються від 0 до 100% за 1.5 години. Ви встигнете зарядитись навіть між графіками 4/4.</p>
             </div>
             <div>
-                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-4 mx-auto md:mx-0">
-                    <i class="fas fa-wave-square"></i>
-                </div>
+                
                 <h3 class="font-bold text-lg mb-2">Чиста синусоїда</h3>
                 <p class="text-slate-500 text-sm">Безпечно для газових котлів, насосів та чутливої комп'ютерної техніки. Жодних ризиків для обладнання.</p>
             </div>
             <div>
-                <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-4 mx-auto md:mx-0">
-                    <i class="fas fa-hand-holding-dollar"></i>
-                </div>
+                
                 <h3 class="font-bold text-lg mb-2">Без прихованих оплат</h3>
                 <p class="text-slate-500 text-sm">Ціну фіксуємо в договорі. Заставу повертаємо після повернення та перевірки станції. Оплату приймаємо на рахунок ФОП.</p>
             </div>
@@ -513,7 +462,7 @@
                         <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar">
                             <!-- Slide 1: Oukitel (Your Photo) -->
                             <div class="min-w-full snap-center relative rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                                 <img src="station1.jpg" class="w-full h-64 md:h-80 object-cover" alt="Oukitel P2001" onerror="this.src='https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80'">
+                                 <img src="/station1.jpg" class="w-full h-64 md:h-80 object-cover" alt="Oukitel P2001" onerror="this.src='https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80'">
                                  <div class="absolute bottom-0 left-0 bg-yellow-500 text-slate-900 font-bold text-xs px-3 py-1 m-3 rounded-lg shadow-md">
                                      Oukitel P2001
                                  </div>
@@ -521,7 +470,7 @@
                             
                             <!-- Slide 2: Bluetti (Placeholder) -->
                             <div class="min-w-full snap-center relative rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                                 <img src="station2.jpg" class="w-full h-64 md:h-80 object-cover" alt="Bluetti">
+                                 <img src="/station2.jpg" class="w-full h-64 md:h-80 object-cover" alt="Bluetti">
                                  <div class="absolute bottom-0 left-0 bg-blue-600 text-white font-bold text-xs px-3 py-1 m-3 rounded-lg shadow-md">
                                      Bluetti
                                  </div>
@@ -529,7 +478,7 @@
     
                             <!-- Slide 3: Aferiy (Placeholder) -->
                             <div class="min-w-full snap-center relative rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                                 <img src="station3.jpg" class="w-full h-64 md:h-80 object-cover" alt="Aferiy">
+                                 <img src="/station3.jpg" class="w-full h-64 md:h-80 object-cover" alt="Aferiy">
                                  <div class="absolute bottom-0 left-0 bg-green-600 text-white font-bold text-xs px-3 py-1 m-3 rounded-lg shadow-md">
                                      Aferiy
                                  </div>
@@ -548,14 +497,14 @@
                     
                     <ul class="space-y-6">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
+                            
                             <div>
                                 <h4 class="font-bold text-slate-800">Офіційний договір</h4>
                                 <p class="text-slate-500 text-sm mt-1">Працюємо легально (ФОП). Підписуємо договір оренди за 5 хвилин. Потрібен лише паспорт.</p>
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
+                            
                             <div>
                                 <h4 class="font-bold text-slate-800">Самовивіз у Києві та доставка по Україні</h4>
                                 <p class="text-slate-500 text-sm mt-1">Самовивіз із Позняків або кур'єрська доставка по Києву. До всіх обласних центрів України відправляємо Новою поштою.</p>
@@ -582,7 +531,7 @@
             </div>
             
             <form name="booking" netlify method="POST" data-netlify="true" action="/success.html" class="bg-slate-50 p-8 rounded-3xl shadow-lg border border-slate-100">
-                <input type="hidden" name="form-name" value="booking">
+                <input type="hidden" name="form-name" value="booking"><input type="hidden" name="city" value="Київ">
                 
                 <div class="mb-5">
                     <label class="block text-sm font-bold text-slate-700 mb-2">Ваш номер телефону</label>
@@ -620,7 +569,7 @@
         <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
             <div>
                 <span class="text-white text-xl font-bold tracking-tight block mb-4">Svitlo<span class="text-yellow-400">Rent</span></span>
-                <p>Енергонезалежність для вашого дому та бізнесу.</p>
+                <p>Енергонезалежність для вашого дому та бізнесу.</p><p class="mt-4"><a href="/mista/">Міста доставки</a> · <a href="/blog/">Блог</a></p>
             </div>
             <div>
                 <h5 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Контакти</h5>
@@ -653,94 +602,12 @@
         </div>
     </footer>
     <!-- PRICING SWITCHER LOGIC -->
-    <script>
-        function switchPricing(tabId) {
-            // 1. Приховати всі вкладки
-            document.querySelectorAll('.pricing-tab').forEach(el => {
-                el.classList.add('hidden');
-                el.classList.remove('block');
-            });
-            
-            // 2. Показати обрану
-            const selected = document.getElementById('price-' + tabId);
-            if(selected) {
-                selected.classList.remove('hidden');
-                selected.classList.add('block');
-            }
-
-            // 3. Оновити стилі кнопок (скинути всі)
-            document.querySelectorAll('.price-btn').forEach(btn => {
-                btn.className = "price-btn bg-white text-slate-500 hover:bg-slate-100 px-6 py-3 rounded-xl font-bold transition-all cursor-pointer";
-            });
-
-            // 4. Активувати натиснуту кнопку
-            const activeBtn = document.getElementById('btn-' + tabId);
-            if(activeBtn) {
-                activeBtn.className = "price-btn bg-slate-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg cursor-default";
-            }
-        }
-    </script>
+    <script src="/assets/rental-1.js"></script>
     <!-- CALCULATOR LOGIC -->
-    <script>
-        function calculate() {
-            let totalWatts = 0;
-            const checkboxes = document.querySelectorAll('.device-checkbox:checked');
-            checkboxes.forEach(cb => { totalWatts += parseInt(cb.value); });
-
-            let hours = 0;
-            const radios = document.getElementsByName('hours');
-            for (let r of radios) { if (r.checked) hours = parseInt(r.value); }
-
-            let neededKwh = (totalWatts * hours) / 1000;
-            neededKwh = neededKwh / 0.85;
-
-            const resultEl = document.getElementById('result-kwh');
-            const modelEl = document.getElementById('result-model');
-            const descEl = document.getElementById('result-desc');
-
-            animateValue(resultEl, parseFloat(resultEl.innerText), neededKwh, 500);
-
-            if (totalWatts === 0) {
-                modelEl.innerText = "Оберіть прилади...";
-                descEl.innerText = "Щоб ми могли підібрати станцію";
-                modelEl.className = "text-xl font-bold text-white";
-                return;
-            }
-
-            if (neededKwh <= 1.0) {
-                modelEl.innerText = "EcoFlow Delta 2";
-                descEl.innerText = "Компактна, легка, ідеальна для ноутбука та світла.";
-                modelEl.className = "text-2xl font-bold text-green-400";
-            } else if (neededKwh <= 2.2) {
-                modelEl.innerText = "Oukitel P2001 Plus";
-                descEl.innerText = "Наш хіт! Потужна (2 кВт), тягне котел та холодильник.";
-                modelEl.className = "text-2xl font-bold text-yellow-400";
-            } else if (neededKwh <= 3.8) {
-                modelEl.innerText = "FOSSiBOT F3600";
-                descEl.innerText = "Монстр автономності. Вистачить на все і надовго.";
-                modelEl.className = "text-2xl font-bold text-purple-400";
-            } else {
-                modelEl.innerText = "Індивідуальне рішення";
-                descEl.innerText = "Вам потрібен комплект станцій або генератор. Зв'яжіться з нами!";
-                modelEl.className = "text-2xl font-bold text-red-400";
-            }
-        }
-
-        function animateValue(obj, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                obj.innerHTML = (progress * (end - start) + start).toFixed(1);
-                if (progress < 1) { window.requestAnimationFrame(step); }
-            };
-            window.requestAnimationFrame(step);
-        }
-        calculate();
-    </script>
+    <script src="/assets/rental-2.js"></script>
     
     <!-- STICKY CALL BUTTON -->
-    <div class="fixed bottom-6 right-6 z-[999]">
+    <div id="quickcall" hidden class="fixed bottom-6 right-6 z-[999]">
         <a href="tel:+380676361027" class="bg-yellow-500 text-slate-900 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl shadow-yellow-500/50 pulse-btn border-4 border-white transition-transform active:scale-95">
             <i class="fas fa-phone-alt text-2xl"></i>
         </a>
@@ -748,8 +615,9 @@
 
 <div class="text-center mt-12 pt-8 border-t border-white/10 text-[10px] space-x-4">
     <span>&copy; 2026 SvitloRent.</span>
-    <a href="offer.html" class="hover:text-yellow-400 transition underline">Публічна оферта</a>
-    <a href="privacy.html" class="hover:text-yellow-400 transition underline">Політика конфіденційності</a>
+    <a href="https://svitlorent.com/offer.html" class="hover:text-yellow-400 transition underline">Публічна оферта</a>
+    <a href="https://svitlorent.com/privacy.html" class="hover:text-yellow-400 transition underline">Політика конфіденційності</a>
 </div>
-</body>
+<dialog id="picker" aria-labelledby="picktitle"><div class="pickhead"><h2 id="picktitle">Місто доставки</h2><button id="closepick" aria-label="Закрити">×</button></div><input id="cityquery" type="search" placeholder="Знайти місто" aria-label="Знайти місто"><div id="matches"><a href="/ivano-frankivsk/" data-search="івано-франківськ ивано-франковск ivano-frankivsk">Івано-Франківськ</a><a href="/vinnytsia/" data-search="вінниця винница vinnytsia">Вінниця</a><a href="/dnipro/" data-search="дніпро днепр днепропетровск dnipro">Дніпро</a><a href="/zhytomyr/" data-search="житомир житомир zhytomyr">Житомир</a><a href="/zaporizhzhia/" data-search="запоріжжя запорожье zaporizhzhia">Запоріжжя</a><a href="/" data-search="київ киев kyiv" aria-current="page">Київ ✓</a><a href="/kropyvnytskyi/" data-search="кропивницький кропивницкий кировоград kropyvnytskyi">Кропивницький</a><a href="/lutsk/" data-search="луцьк луцк lutsk">Луцьк</a><a href="/lviv/" data-search="львів львов lviv">Львів</a><a href="/mykolaiv/" data-search="миколаїв николаев mykolaiv">Миколаїв</a><a href="/odesa/" data-search="одеса одесса odesa">Одеса</a><a href="/poltava/" data-search="полтава полтава poltava">Полтава</a><a href="/rivne/" data-search="рівне ровно rivne">Рівне</a><a href="/sumy/" data-search="суми сумы sumy">Суми</a><a href="/ternopil/" data-search="тернопіль тернополь ternopil">Тернопіль</a><a href="/uzhhorod/" data-search="ужгород ужгород uzhhorod">Ужгород</a><a href="/kharkiv/" data-search="харків харьков kharkiv">Харків</a><a href="/kherson/" data-search="херсон херсон kherson">Херсон</a><a href="/khmelnytskyi/" data-search="хмельницький хмельницкий khmelnytskyi">Хмельницький</a><a href="/cherkasy/" data-search="черкаси черкассы cherkasy">Черкаси</a><a href="/chernivtsi/" data-search="чернівці черновцы chernivtsi">Чернівці</a><a href="/chernihiv/" data-search="чернігів чернигов chernihiv">Чернігів</a></div><p id="nohits" hidden>Місто не знайдено</p></dialog><script src="/assets/rental-3.js"></script><script src="/assets/rental-4.js"></script></body>
 </html>
+
