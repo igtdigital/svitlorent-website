@@ -517,37 +517,40 @@
                 <p class="text-slate-500 mt-2">Залиште контакти, ми зв'яжемося для уточнення деталей.</p>
             </div>
             
-            <form name="booking" netlify method="POST" data-netlify="true" action="/success.html" class="bg-slate-50 p-8 rounded-3xl shadow-lg border border-slate-100">
+            <form data-min-days="5" name="booking" netlify method="POST" data-netlify="true" action="/success.html" class="bg-slate-50 p-8 rounded-3xl shadow-lg border border-slate-100">
                 <input type="hidden" name="form-name" value="booking"><input type="hidden" name="city" value="Черкаси">
                 
                 <div class="mb-5">
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Ваш номер телефону</label>
+                    <label for="booking-phone" class="block text-sm font-bold text-slate-700 mb-2">Ваш номер телефону</label>
                     <input 
                         type="tel" 
                         name="phone" 
                         required 
-                        value="+380" 
-                        oninput="if (!this.value.startsWith('+380')) this.value = '+380'"
-                        placeholder="+380 XX XXX XX XX" 
+                        autocomplete="tel" inputmode="tel" id="booking-phone"
+                        pattern="(?:\+?380[0-9]{9}|0[0-9]{9})"
+                        title="Введіть номер у форматі 0671234567 або +380671234567"
+                        placeholder="067 123 45 67"
                         class="w-full p-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none transition font-semibold"
                     >
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4 mb-6">
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">Дата початку</label>
-                        <input type="date" name="start_date" required class="w-full p-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none transition text-sm">
+                        <label for="start_date" class="block text-sm font-bold text-slate-700 mb-2">Дата початку</label>
+                        <input type="date" id="start_date" name="start_date" required class="w-full p-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none transition text-sm">
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">Дата закінчення</label>
-                        <input type="date" name="end_date" required class="w-full p-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none transition text-sm">
+                        <label for="end_date" class="block text-sm font-bold text-slate-700 mb-2">Дата закінчення</label>
+                        <input type="date" id="end_date" name="end_date" required class="w-full p-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none transition text-sm">
                     </div>
                 </div>
                 
+                <p class="text-sm text-slate-600 mb-4">Мінімальний строк оренди — 5 діб.</p>
                 <button type="submit" class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition shadow-lg shadow-slate-900/20 flex justify-center items-center gap-2">
                     Надіслати заявку <i class="fas fa-paper-plane text-yellow-400"></i>
                 </button>
             </form>
+            <script defer src="/assets/booking-validation.js"></script>
         </div>
     </section>
 
